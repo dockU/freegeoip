@@ -7,4 +7,4 @@ FILENAME="freegeoip-${FREEGEOIP_VERSION}-${FREEGEOIP_ARCHITECTURE}"
 curl --location --silent --output "${FILENAME}.tar.gz" "https://github.com/fiorix/freegeoip/releases/download/v${FREEGEOIP_VERSION}/${FILENAME}.tar.gz"
 tar xf "${FILENAME}.tar.gz"
 mv $FILENAME/freegeoip .
-curl -T freegeoip -ujchen:${BINTRAY_TOKEN} https://api.bintray.com/content/jchen/docku/freegeoip/${FREEGEOIP_VERSION}/freegeoip
+curl -T freegeoip -ujchen:${BINTRAY_TOKEN} "https://api.bintray.com/content/jchen/docku/freegeoip/${FREEGEOIP_VERSION}/freegeoip?publish=1"
